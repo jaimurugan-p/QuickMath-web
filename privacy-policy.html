@@ -23,70 +23,60 @@
     <a class="policy-back" href="index.html">← Back to QuickMath</a>
     <div class="eyebrow">QUICKMATH: HIDE PHOTO &amp; VIDEO</div>
     <h1>Privacy <span>Policy</span></h1>
-    <p class="policy-updated">Effective date: November 13, 2026</p>
-    <p class="policy-intro">This policy explains how QuickMath handles information when you use the calculator, private vaults, and optional Google Drive backup. QuickMath is designed to keep vault media and encryption keys on your device.</p>
+    <p class="policy-updated"><strong>Effective Date:</strong> November 13, 2026<br><strong>Last Updated:</strong> November 13, 2026<br><strong>Developer:</strong> JaiDroid Labs<br><strong>Contact Email:</strong> <a href="mailto:labs@jaidroid.com">labs@jaidroid.com</a></p>
+    <p class="policy-intro">QuickMath (“we”, “our”, or “the app”) is committed to protecting your privacy. This Privacy Policy describes how QuickMath handles personal information, device data, and media files.</p>
 
-    <div class="policy-notice"><strong>Current app version:</strong> QuickMath does not include analytics, crash reporting, or ads. Advertising is planned for a future version; this policy and the app's disclosures will be updated before advertising is introduced.</div>
+    <div class="policy-notice"><strong>Current app version:</strong> QuickMath has no advertising, analytics, or crash-reporting SDKs. Advertising is planned for a future version. Before ads or other third-party data processing are introduced, this policy and the app's disclosures will be updated.</div>
 
     <section class="policy-section">
-      <h2>Information QuickMath handles</h2>
-      <h3>Photos, videos, and vault organization</h3>
-      <p>When you add photos or videos to a vault, QuickMath processes that media and its vault organization so the app can store, browse, and display it. Media is encrypted on your device using AES-256-GCM before it is kept in the vault. The encryption key is derived locally from your PIN using PBKDF2-HMAC-SHA256 and a unique random salt.</p>
-      <h3>PIN and encryption keys</h3>
-      <p>Your PIN is used on-device for vault access and key derivation. Encryption keys are held in memory while a vault is unlocked and cleared when it is locked, subject to device memory-management limitations. QuickMath does not upload your PIN or encryption keys.</p>
-      <h3>Calculator use</h3>
-      <p>Calculator entries are processed on the device to perform calculations and are not sent to the developer.</p>
+      <h2>1. Information We Collect and Process</h2>
+      <h3>A. Photos, Videos, and Files (Media)</h3>
+      <ul><li><strong>Purpose:</strong> QuickMath accesses device photos and videos so you can select media to import, hide, and encrypt in private vaults.</li><li><strong>On-device encryption:</strong> Imported media is encrypted locally using AES-256-GCM. PBKDF2-HMAC-SHA256 derives the encryption key from your PIN using a unique random salt.</li><li><strong>Media access:</strong> QuickMath does not scan or browse your media for unrelated purposes, and does not transmit media to developer-owned servers.</li></ul>
+      <h3>B. Passcodes and Security Credentials</h3>
+      <p>Vault PINs and recovery-question answers are not stored in plaintext. They are salted with cryptographically random 128-bit salts and hashed on-device using PBKDF2-HMAC-SHA256. They are not transmitted from your device. Encryption keys are held in memory while a vault is unlocked and cleared when it is locked, subject to device memory-management limitations.</p>
+      <h3>C. Google Account Information (Optional Cloud Sync)</h3>
+      <p>If you connect Google Drive for backup, QuickMath authenticates with your Google Account using Google Play Services OAuth 2.0. QuickMath receives your Google email address and display name and shows them in the app to identify the connected backup account. This account information is used for the backup feature and is not sent to developer-owned servers or used for advertising.</p>
     </section>
 
     <section class="policy-section">
-      <h2>Optional Google Drive backup</h2>
-      <p>If you choose to connect Google Drive and enable backup, QuickMath uses the internet to upload and restore encrypted backup data in the hidden <code>appDataFolder</code> area of your personal Google Drive. The backup contains encrypted media files and related vault backup data, not readable photos or videos. Your PIN and encryption keys are not uploaded.</p>
-      <p>Google provides account authorization and cloud storage. QuickMath uses the authorization granted through Google to call the Drive API for your backup and restore requests; your Google password is not provided to QuickMath. Google receives the encrypted backup data and processes account authorization and service information under its own privacy policy and terms. QuickMath's developer does not operate a media server and does not receive the backup files or encryption keys. The Drive AppData folder is hidden from the regular Drive file list and is accessible to QuickMath through Google's Drive API.</p>
-      <p>Drive backup is optional. If you do not enable it, QuickMath does not send vault media to Google Drive.</p>
+      <h2>2. Google Drive API and Limited Use Disclosure</h2>
+      <p>QuickMath optionally backs up and restores encrypted vault items using Google Drive.</p>
+      <ul><li><strong>Restricted AppData scope:</strong> QuickMath requests only <code>https://www.googleapis.com/auth/drive.appdata</code> for Drive access. This scope permits access to QuickMath's hidden Application Data folder, not your personal files, documents, photos, or spreadsheets in the regular Drive area.</li><li><strong>Limited use:</strong> QuickMath's use and transfer of information received from Google APIs complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</li><li>Google account information and credentials are used only for backup and restore. They are not sold or used for advertising. Vault backup files sent to Drive are encrypted on your device before upload; encryption keys are not uploaded.</li></ul>
+      <p>Google operates the Drive authorization and storage services and processes information under Google's privacy policy and terms. The Drive AppData folder is hidden from the regular Drive file list. See <a href="https://developers.google.com/workspace/drive/api/guides/appdata">Google's AppData documentation</a>.</p>
     </section>
 
     <section class="policy-section">
-      <h2>How information is shared</h2>
-      <p>QuickMath does not sell vault media or encryption keys. The only third-party cloud recipient for vault data in the current version is Google Drive, and it receives backup data only when you choose to connect and use backup. The developer does not receive vault media, PINs, or encryption keys. The current version has no analytics, crash-reporting, or advertising SDKs.</p>
+      <h2>3. Third-Party Sharing and Analytics</h2>
+      <ul><li><strong>No advertising in the current version:</strong> QuickMath contains no third-party advertising SDKs. Ads are planned for a future version; this policy and the app's disclosures will be revised before ads are introduced.</li><li><strong>No analytics or crash reporting:</strong> The current version does not include behavioral analytics or crash-reporting SDKs.</li><li><strong>No selling of data:</strong> We do not sell, rent, or monetize personal data or vault content. If you enable Drive backup, encrypted backup files are sent to Google as the storage provider for that feature, as described above. We do not share Google account information with advertisers or unrelated third parties.</li></ul>
     </section>
 
     <section class="policy-section">
-      <h2>Storage, retention, and deletion</h2>
-      <p>Local vault files remain on your device until you delete them, delete their vault, or clear QuickMath's app storage. Drive backup files remain in your Google Drive AppData area until QuickMath's synced cleanup removes them or you delete QuickMath's hidden app data in Google Drive. Deleting local files does not make an offline Drive copy disappear until the app can complete its cleanup pass.</p>
-      <h3>Delete selected photos or videos</h3>
-      <ol><li>Unlock QuickMath by entering your PIN and long-pressing <strong>=</strong>.</li><li>Long-press a media item to select items, then tap the trash/delete control and confirm.</li><li>When Drive sync is connected, QuickMath runs a cleanup pass to delete the matching encrypted cloud files.</li></ol>
-      <p>QuickMath's local shred routine overwrites file contents with zeros before removal. Flash storage controllers and wear-leveling may prevent an app from guaranteeing that every physical storage cell has been overwritten.</p>
-      <h3>Delete an entire vault</h3>
-      <ol><li>Unlock the vault and open its Settings using the gear icon.</li><li>Choose <strong>Delete This Vault</strong>, then confirm with <strong>Shred &amp; Delete</strong>.</li></ol>
-      <p>This deletes the vault's encrypted files, thumbnails, albums, and database records using the app's local shred routine. If Drive sync is connected, matching cloud files are removed through the cleanup pass.</p>
-      <h3>Clear all local app data</h3>
-      <p>To remove all local vaults, PINs, and databases, open Android <strong>Settings → Apps → QuickMath → Storage &amp; cache → Clear storage</strong> (wording can vary by device). This does not by itself remove an existing Google Drive backup.</p>
-      <h3>Delete Drive backups</h3>
-      <p>QuickMath stores backups in Google's hidden AppData folder, which does not appear in the regular Drive file list. To delete it, open Google Drive settings, go to <strong>Manage apps</strong>, find QuickMath, open its options, and choose <strong>Delete hidden app data</strong>. Confirm the deletion. Google may change the exact menu labels. After deletion, QuickMath can no longer restore that backup. See <a href="https://developers.google.com/workspace/drive/api/guides/appdata">Google Drive AppData documentation</a>.</p>
-      <p>Keep your PIN and any required recovery credentials safe. If you lose credentials needed to decrypt your vault, the encrypted data may not be recoverable.</p>
+      <h2>4. Data Retention, Shredding, and Deletion</h2>
+      <p>Local vault data remains on your device until you delete it or clear QuickMath's app storage. Optional Drive backups remain in the hidden AppData folder until deleted by QuickMath's synced cleanup or removed through Google's app-data controls. If a device is offline, cloud cleanup occurs when the app can sync again.</p>
+      <ol><li><strong>Delete individual media:</strong> Unlock QuickMath by entering your PIN and long-pressing <strong>=</strong>. Long-press a photo or video to enter multi-select mode, select items, tap the trash/delete icon, and confirm. When Drive sync is connected, QuickMath runs a cleanup pass to delete matching encrypted cloud files.</li><li><strong>Delete an entire vault:</strong> Unlock the vault, tap the Settings gear, scroll to <strong>Delete This Vault</strong>, and confirm with <strong>Shred &amp; Delete</strong>. This removes that vault's encrypted files, thumbnails, albums, and database records.</li><li><strong>Clear all local app data:</strong> On your device, open <strong>Settings → Apps → QuickMath → Storage &amp; cache → Clear storage</strong> (labels vary by device). This removes local vaults, PINs, and databases, but does not by itself delete Drive backups.</li><li><strong>Delete Google Drive cloud data:</strong> In a browser, open <a href="https://drive.google.com">drive.google.com</a>, then go to <strong>Settings → Manage apps</strong>. Find QuickMath, open <strong>Options</strong>, and select <strong>Delete hidden app data</strong>. Confirm the deletion. Google may change menu labels. Deleted backups cannot be restored.</li></ol>
+      <p>QuickMath's local shred routine uses zero-fill overwriting before removal. Flash storage controllers and wear-leveling may prevent software from guaranteeing that every physical storage cell has been overwritten.</p>
+      <p>Keep your PIN and required recovery credentials safe. If you lose credentials needed to decrypt your vault, your encrypted data may not be recoverable.</p>
     </section>
 
     <section class="policy-section">
-      <h2>Permissions and device data</h2>
-      <p>QuickMath requests these Android permissions for the purposes below:</p>
-      <ul><li><code>READ_MEDIA_IMAGES</code> (Android 13+) and <code>READ_MEDIA_VIDEO</code> (Android 13+): access photos and videos you choose to import into a vault.</li><li><code>READ_MEDIA_VISUAL_USER_SELECTED</code> (Android 14+): supports partial access when you select specific photos and videos.</li><li><code>READ_EXTERNAL_STORAGE</code> (Android 12 and earlier): reads device media on older Android versions.</li><li><code>WRITE_EXTERNAL_STORAGE</code> (Android 9 and earlier): exports restored files on older Android versions.</li><li><code>INTERNET</code>: communicates with Google Drive when you choose to back up or restore.</li><li><code>ACCESS_NETWORK_STATE</code>: checks connectivity on-device so paused sync can resume after the network returns. QuickMath does not send network-state details to its developer.</li><li><code>VIBRATE</code>: provides tactile feedback for calculator interactions.</li></ul>
-      <p>QuickMath does not request camera, microphone/audio recording, location, contacts, phone, SMS, or biometric permissions. Photo and video permissions are used for media import and, on older Android versions, exporting restored files. Network access is used for optional Google Drive backup and restore.</p>
-      <p>The current version does not use analytics, crash reporting, or advertising SDKs. Advertising is planned for a future version. Before enabling ads or other third-party data processing, the policy and in-app disclosures will be updated to describe the data involved and recipients.</p>
+      <h2>5. Permissions Used by QuickMath</h2>
+      <ul><li><code>READ_MEDIA_IMAGES</code> and <code>READ_MEDIA_VIDEO</code> (Android 13+): select and import photos and videos into the vault.</li><li><code>READ_MEDIA_VISUAL_USER_SELECTED</code> (Android 14+): supports partial photo and video access when you select specific media.</li><li><code>READ_EXTERNAL_STORAGE</code> (Android 12 and earlier): reads device media on older Android versions.</li><li><code>WRITE_EXTERNAL_STORAGE</code> (Android 9 and earlier): exports restored files on older devices.</li><li><code>INTERNET</code>: communicates with Google Drive for backup and restore when you enable or use cloud sync.</li><li><code>ACCESS_NETWORK_STATE</code>: checks Wi-Fi/mobile connectivity so paused sync can resume when the device reconnects.</li><li><code>VIBRATE</code>: provides tactile feedback when tapping calculator keys or long-pressing <strong>=</strong>.</li></ul>
+      <p>QuickMath does not request camera, microphone/audio recording, location, contacts, phone, SMS, or biometric permissions.</p>
     </section>
 
     <section class="policy-section">
-      <h2>Children's privacy</h2>
-      <p>QuickMath does not require a separate QuickMath account to use its local vault. If a user chooses to connect Google Drive, Google handles sign-in and authorization for that feature. Photos and videos added to a vault are handled as described in this policy, regardless of who appears in the media.</p>
+      <h2>6. Children's Privacy</h2>
+      <p>QuickMath is not directed to children under the age of 13. We do not knowingly collect personal information from children.</p>
     </section>
 
     <section class="policy-section">
-      <h2>Changes to this policy</h2>
-      <p>This policy may change when QuickMath's features or data practices change. The effective date at the top of this page will be updated when a revised policy is published.</p>
+      <h2>7. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated “Last Updated” date.</p>
     </section>
 
     <section class="policy-section policy-contact">
-      <h2>Contact</h2>
-      <p>QuickMath is developed by JaiDroid. For privacy questions or requests for help with data deletion, contact <a href="mailto:labs@jaidroid.com">labs@jaidroid.com</a>.</p>
+      <h2>8. Contact Us</h2>
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or your data, contact JaiDroid Labs at <a href="mailto:labs@jaidroid.com">labs@jaidroid.com</a>.</p>
     </section>
   </main>
 
