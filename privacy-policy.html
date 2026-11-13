@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d17">
+  <meta name="description" content="Privacy Policy for QuickMath: Hide Photo & Video, including on-device AES-256-GCM encryption and optional Google Drive backups.">
+  <title>Privacy Policy — QuickMath</title>
+  <link rel="icon" type="image/png" href="Assets/QuickMath_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="QuickMath home"><img src="Assets/QuickMath_icon.png" alt="" width="42" height="42"><span>Quick<span class="brand-accent">Math</span></span></a>
+    <nav aria-label="Main navigation"><a href="index.html#features">Features</a><a href="index.html#security">Security</a><a href="index.html#backup">Backup</a></nav>
+    <a class="header-cta" href="index.html">Back to QuickMath <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="policy-page page-width">
+    <a class="policy-back" href="index.html">← Back to QuickMath</a>
+    <div class="eyebrow">QUICKMATH: HIDE PHOTO &amp; VIDEO</div>
+    <h1>Privacy <span>Policy</span></h1>
+    <p class="policy-updated">Effective date: November 13, 2026</p>
+    <p class="policy-intro">This policy explains how QuickMath handles information when you use the calculator, private vaults, and optional Google Drive backup. QuickMath is designed to keep vault media and encryption keys on your device.</p>
+
+    <div class="policy-notice"><strong>Current app version:</strong> QuickMath does not include analytics, crash reporting, or ads. Advertising is planned for a future version; this policy and the app's disclosures will be updated before advertising is introduced.</div>
+
+    <section class="policy-section">
+      <h2>Information QuickMath handles</h2>
+      <h3>Photos, videos, and vault organization</h3>
+      <p>When you add photos or videos to a vault, QuickMath processes that media and its vault organization so the app can store, browse, and display it. Media is encrypted on your device using AES-256-GCM before it is kept in the vault. The encryption key is derived locally from your PIN using PBKDF2-HMAC-SHA256 and a unique random salt.</p>
+      <h3>PIN and encryption keys</h3>
+      <p>Your PIN is used on-device for vault access and key derivation. Encryption keys are held in memory while a vault is unlocked and cleared when it is locked, subject to device memory-management limitations. QuickMath does not upload your PIN or encryption keys.</p>
+      <h3>Calculator use</h3>
+      <p>Calculator entries are processed on the device to perform calculations and are not sent to the developer.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2>Optional Google Drive backup</h2>
+      <p>If you choose to connect Google Drive and enable backup, QuickMath uses the internet to upload and restore encrypted backup data in the hidden <code>appDataFolder</code> area of your personal Google Drive. The backup contains encrypted media files and related vault backup data, not readable photos or videos. Your PIN and encryption keys are not uploaded.</p>
+      <p>Google provides account authorization and cloud storage. QuickMath uses the authorization granted through Google to call the Drive API for your backup and restore requests; your Google password is not provided to QuickMath. Google receives the encrypted backup data and processes account authorization and service information under its own privacy policy and terms. QuickMath's developer does not operate a media server and does not receive the backup files or encryption keys. The Drive AppData folder is hidden from the regular Drive file list and is accessible to QuickMath through Google's Drive API.</p>
+      <p>Drive backup is optional. If you do not enable it, QuickMath does not send vault media to Google Drive.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2>How information is shared</h2>
+      <p>QuickMath does not sell vault media or encryption keys. The only third-party cloud recipient for vault data in the current version is Google Drive, and it receives backup data only when you choose to connect and use backup. The developer does not receive vault media, PINs, or encryption keys. The current version has no analytics, crash-reporting, or advertising SDKs.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2>Storage, retention, and deletion</h2>
+      <p>Local vault files remain on your device until you delete them, delete their vault, or clear QuickMath's app storage. Drive backup files remain in your Google Drive AppData area until QuickMath's synced cleanup removes them or you delete QuickMath's hidden app data in Google Drive. Deleting local files does not make an offline Drive copy disappear until the app can complete its cleanup pass.</p>
+      <h3>Delete selected photos or videos</h3>
+      <ol><li>Unlock QuickMath by entering your PIN and long-pressing <strong>=</strong>.</li><li>Long-press a media item to select items, then tap the trash/delete control and confirm.</li><li>When Drive sync is connected, QuickMath runs a cleanup pass to delete the matching encrypted cloud files.</li></ol>
+      <p>QuickMath's local shred routine overwrites file contents with zeros before removal. Flash storage controllers and wear-leveling may prevent an app from guaranteeing that every physical storage cell has been overwritten.</p>
+      <h3>Delete an entire vault</h3>
+      <ol><li>Unlock the vault and open its Settings using the gear icon.</li><li>Choose <strong>Delete This Vault</strong>, then confirm with <strong>Shred &amp; Delete</strong>.</li></ol>
+      <p>This deletes the vault's encrypted files, thumbnails, albums, and database records using the app's local shred routine. If Drive sync is connected, matching cloud files are removed through the cleanup pass.</p>
+      <h3>Clear all local app data</h3>
+      <p>To remove all local vaults, PINs, and databases, open Android <strong>Settings → Apps → QuickMath → Storage &amp; cache → Clear storage</strong> (wording can vary by device). This does not by itself remove an existing Google Drive backup.</p>
+      <h3>Delete Drive backups</h3>
+      <p>QuickMath stores backups in Google's hidden AppData folder, which does not appear in the regular Drive file list. To delete it, open Google Drive settings, go to <strong>Manage apps</strong>, find QuickMath, open its options, and choose <strong>Delete hidden app data</strong>. Confirm the deletion. Google may change the exact menu labels. After deletion, QuickMath can no longer restore that backup. See <a href="https://developers.google.com/workspace/drive/api/guides/appdata">Google Drive AppData documentation</a>.</p>
+      <p>Keep your PIN and any required recovery credentials safe. If you lose credentials needed to decrypt your vault, the encrypted data may not be recoverable.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2>Permissions and device data</h2>
+      <p>QuickMath requests these Android permissions for the purposes below:</p>
+      <ul><li><code>READ_MEDIA_IMAGES</code> (Android 13+) and <code>READ_MEDIA_VIDEO</code> (Android 13+): access photos and videos you choose to import into a vault.</li><li><code>READ_MEDIA_VISUAL_USER_SELECTED</code> (Android 14+): supports partial access when you select specific photos and videos.</li><li><code>READ_EXTERNAL_STORAGE</code> (Android 12 and earlier): reads device media on older Android versions.</li><li><code>WRITE_EXTERNAL_STORAGE</code> (Android 9 and earlier): exports restored files on older Android versions.</li><li><code>INTERNET</code>: communicates with Google Drive when you choose to back up or restore.</li><li><code>ACCESS_NETWORK_STATE</code>: checks connectivity on-device so paused sync can resume after the network returns. QuickMath does not send network-state details to its developer.</li><li><code>VIBRATE</code>: provides tactile feedback for calculator interactions.</li></ul>
+      <p>QuickMath does not request camera, microphone/audio recording, location, contacts, phone, SMS, or biometric permissions. Photo and video permissions are used for media import and, on older Android versions, exporting restored files. Network access is used for optional Google Drive backup and restore.</p>
+      <p>The current version does not use analytics, crash reporting, or advertising SDKs. Advertising is planned for a future version. Before enabling ads or other third-party data processing, the policy and in-app disclosures will be updated to describe the data involved and recipients.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2>Children's privacy</h2>
+      <p>QuickMath does not require a separate QuickMath account to use its local vault. If a user chooses to connect Google Drive, Google handles sign-in and authorization for that feature. Photos and videos added to a vault are handled as described in this policy, regardless of who appears in the media.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2>Changes to this policy</h2>
+      <p>This policy may change when QuickMath's features or data practices change. The effective date at the top of this page will be updated when a revised policy is published.</p>
+    </section>
+
+    <section class="policy-section policy-contact">
+      <h2>Contact</h2>
+      <p>QuickMath is developed by JaiDroid. For privacy questions or requests for help with data deletion, contact <a href="mailto:labs@jaidroid.com">labs@jaidroid.com</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="page-width footer-inner"><a class="brand" href="index.html"><img src="Assets/QuickMath_icon.png" alt="" width="32" height="32"><span>Quick<span class="brand-accent">Math</span></span></a><a href="privacy-policy.html">Privacy Policy</a><span>© <span id="year">2026</span> QuickMath</span></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

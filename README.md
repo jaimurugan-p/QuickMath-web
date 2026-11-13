@@ -18,4 +18,5 @@ GitHub will show the published URL in the Pages settings once the first deployme
 ## Before publishing
 
 - Add a Google Play listing URL to the site when the app listing is available.
-- Add a privacy policy page or link if your app distribution channel requires one. This landing page describes the security details provided for QuickMath and does not make claims about analytics, permissions, or other data handling that were not specified.
+- `privacy-policy.html` is linked from the site footer. Use `https://quickmath.jaidroid.com/privacy-policy.html` in the Play Console privacy-policy field and add the same URL to an in-app Privacy Policy link.
+- Update the policy and Play Console Data safety answers before introducing ads or any other data collection/third-party processing.
