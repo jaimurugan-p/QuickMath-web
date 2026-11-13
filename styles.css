@@ -95,6 +95,8 @@ img{max-width:100%;height:auto}
 .policy-page h1{font:800 clamp(2.6rem,7vw,4.2rem)/1.08 var(--display);letter-spacing:-.055em;margin:16px 0 10px}
 .policy-page h1 span{background:linear-gradient(100deg,#4be2e7 2%,#4799ff 60%,#a271ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .policy-updated{color:#91a0b4;font-size:12px;margin:0 0 24px}
+.policy-jump{margin:20px 0 32px}
+.policy-jump a{color:#7be1ed;font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
 .policy-intro{max-width:740px;color:#c1ccda;font-size:16px;line-height:1.8}
 .policy-notice{margin:26px 0 42px;padding:16px 18px;border:1px solid rgba(92,164,218,.25);border-radius:10px;background:#102331;color:#adbdcf;font-size:13px;line-height:1.7}
 .policy-notice strong{color:#fff}
